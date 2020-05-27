@@ -141,7 +141,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                关于
+                                共享 NAS 存储使用方法分享
                             </h1>
                             
                                     <!--zh-->
@@ -150,18 +150,60 @@
                                         <a itemprop="author" rel="author" href="/">
                                             老蔡的一亩三分地
                                         </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-01-25</a></span>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-05-27</a></span>
                                         <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">0.1
+                                    href="#">3.0
                                     &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">18</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">847</a></span>
                                         
                                     </div>
                                     
                         </header>
                         
                         <div class="post-content">
-                            <p>这是关于的页面，可以在这里向世界介绍你！</p>
+                            <p>##前言<br>
+疫情防控期间，远程协同办公、外网会议需求明显上升，同时伴随着灾备领域新技术的不断发展、党建宣传工作力度的不断提升，工作中常常需要做外网资料搜集，为了方便大家外网非涉密资料的存储和分享，我在家中的NAS上部署了专用的共享分区，希望能对大家的工作有所帮助。<br>
+##更新日志<br>
+2020-05-22 V1.0 文档创建 by 蔡敏行<br>
+##快速上手<br>
+本节将介绍如何快速完成对 NAS 的<strong>一次性</strong>访问和文件操作。</p>
+<blockquote>
+<p>在开始之前，推荐使用 <strong>Google Chrome</strong> 或 <strong>Firefox</strong> 浏览器访问 NAS， IE 浏览器不是一个好的选择，可能会因为性能原因导致访问或文件上传/下载卡顿，影响使用体验。<br>
+###接入 NAS<br>
+使用浏览器访问 https://quickconnect.cn/caichang01 或 https://caichang01.quickconnect.cn ，即可进入 NAS 的登陆界面。<br>
+[(img)]<br>
+输入账号：bybzb，密码：abc123，即可接入 NAS，进入控制台界面。<br>
+[(img)]<br>
+###浏览文件<br>
+在控制台界面，点击 <strong>File Station</strong>，进入文件浏览器界面。<br>
+[(img)]<br>
+文件浏览器中第一级目录共有三个文件夹， bybzb 账号对 home 和 homes 文件夹均为只读权限<br>
+###已有文件操作<br>
+在 File Station 中右键单击需要操作的文件，可以完成下载/重命名/压缩/电子文件附件共享等基于已有文件的操作。<br>
+[(img)]<br>
+###新增文件操作<br>
+在 File Station 上部工具栏中单击“上传”，可以选择本地文件进行上传操作。<br>
+[(img)]<br>
+<em>上传操作分为 忽略 和 覆盖 两类，这是因为 NAS 的 DSM 系统并不支持断点续传操作，如果第一次上传文件中断，或目录中已有同名文件，选择“忽略”方式，原有文件将得到保留，本次上传的文件将以副本命名方式存在；选择“覆盖”方式，则原有文件将被覆盖。</em><br>
+对因上传失败而导致需要二次上传的文件，建议采取覆盖方式上传<br>
+###新建文件夹操作<br>
+在 File Station 上部工具栏中单击“新建文件夹”，即可完成新建文件夹操作。<br>
+##存储容量及建议<br>
+NAS 的共享存储容量为 <strong>100GB</strong>，出于提高利用效率，节约本地存储的考量，本文档建议存储的文件类型为：</p>
+</blockquote>
+<ul>
+<li><strong>非密</strong>会议录音/录像等音视频文件</li>
+<li>常用工作软件安装包</li>
+<li>共享文档资料（如 .doc/ .ppt/ .xls/ .pdf 等格式）<br>
+##进阶操作<br>
+部署共享存储的 NAS 使用的 DSM 系统拥有丰富的插件生态，可以实现一些非常有用的进阶操作。本节将介绍如何利用 DSM 系统的 Download Station 插件实现外网资料的远程下载，利用 Synology Office 插件实施在线文档协同编辑以及利用部署在本机的 Synology Drive Client 软件实现本地到 NAS 的文件双向同步，版本控制等进阶操作。<br>
+###外网资料远程下载<br>
+在控制台界面，点击 <strong>Download Station</strong>，进入下载站控制界面 。</li>
+</ul>
+<p>###在线文档协同编辑<br>
+###本地文档双向同步<br>
+::施工中，预计下一版本完成本部分内容::<br>
+##维护窗口</p>
 
                         </div>
                         
@@ -171,9 +213,9 @@
                                                                     <span style="margin-right:15px">
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://caichang01.github.io/post/about/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://caichang01.github.io/post/about/&sharesource=qzone&title=关于&pics=https://caichang01.github.io/images/avatar.png?v=1590546504103&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://caichang01.github.io/post/about/&sharesource=weibo&title=关于 + " - " + &pic="https://caichang01.github.io/images/avatar.png?v=1590546504103 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://caichang01.github.io/post/gong-xiang-nas-cun-chu-shi-yong-fang-fa-fen-xiang/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://caichang01.github.io/post/gong-xiang-nas-cun-chu-shi-yong-fang-fa-fen-xiang/&sharesource=qzone&title=共享 NAS 存储使用方法分享&pics=https://caichang01.github.io/images/avatar.png?v=1590546504103&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://caichang01.github.io/post/gong-xiang-nas-cun-chu-shi-yong-fang-fa-fen-xiang/&sharesource=weibo&title=共享 NAS 存储使用方法分享 + " - " + &pic="https://caichang01.github.io/images/avatar.png?v=1590546504103 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
@@ -198,6 +240,10 @@
                                                                                 <section class="post-nav">
                                                                                     
                                                                                             
+                                                                                                <a class="next" rel="next" href="https://caichang01.github.io/post/hello-gridea/">
+                                                                                                    Hello Gridea
+                                                                                                </a>
+                                                                                                
                                                                                 </section>
                     </article>
                 </div>
